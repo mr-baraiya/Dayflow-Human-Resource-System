@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚀 Odoo x GCET Hackathon '26
+# Odoo x GCET Hackathon '26
 
 ### *Official Repository for Odoo x GCET Hackathon 2026 – Virtual Round*
 
@@ -10,9 +10,22 @@
 
 ---
 
+### Team Members
+
+| Name | Role | GitHub |
+|------|------|--------|
+| **Vishal Baraiya** | Team Leader, Database Designer & Backend Developer | [@vishal](https://github.com/) |
+| **Pujan Ajmera** | Frontend UI & Layout, API Integration | [@pujan](https://github.com/) |
+| **Haresh Zapadiya** | Frontend Components, UX & Accessibility | [@haresh](https://github.com/) |
+| **Dhruvrajsinh Zala** | Testing & Documentation | [@dhruv](https://github.com/) |
+
+**Mentor**: Dishant Mistry (Odoo)
+
+---
+
 </div>
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [About the Project](#-about-the-project)
 - [Problem Statement](#-problem-statement)
@@ -34,11 +47,11 @@
 
 ---
 
-## 🎯 About the Project
+## About the Project
 
 This repository contains the solution developed by our team for the **Odoo x GCET Hackathon 2026 Virtual Round**. Our project demonstrates innovative problem-solving through modern web development practices, focusing on scalability, user experience, and clean architecture.
 
-### 🏆 Competition Details
+### Competition Details
 
 - **Event**: Odoo x GCET Hackathon 2026
 - **Round**: Virtual Round
@@ -47,7 +60,7 @@ This repository contains the solution developed by our team for the **Odoo x GCE
 
 ---
 
-## 🧩 Problem Statement
+## Problem Statement
 
 **[Problem Statement Title]**
 
@@ -63,19 +76,19 @@ This repository contains the solution developed by our team for the **Odoo x GCE
 
 ---
 
-## 💡 Solution Overview
+## Solution Overview
 
 Our solution leverages cutting-edge web technologies to deliver a robust, scalable, and user-friendly application. The architecture is designed with the following principles:
 
 ### Core Focus Areas
 
-- **🎨 User Experience**: Intuitive and responsive interface that works seamlessly across all devices
-- **⚡ Performance**: Optimized for fast load times and smooth interactions
-- **🔒 Security**: Implementing industry-standard security practices for data protection
-- **📊 Scalability**: Modular architecture that can grow with user demands
-- **🧪 Quality**: Comprehensive testing and clean code practices
-- **🔄 Real-time Operations**: Dynamic data handling and live updates
-- **📱 Responsive Design**: Mobile-first approach ensuring compatibility across devices
+- **User Experience**: Intuitive and responsive interface that works seamlessly across all devices
+- **Performance**: Optimized for fast load times and smooth interactions
+- **Security**: Implementing industry-standard security practices for data protection
+- **Scalability**: Modular architecture that can grow with user demands
+- **Quality**: Comprehensive testing and clean code practices
+- **Real-time Operations**: Dynamic data handling and live updates
+- **Responsive Design**: Mobile-first approach ensuring compatibility across devices
 
 ### Architecture Highlights
 
@@ -87,29 +100,29 @@ Our solution leverages cutting-edge web technologies to deliver a robust, scalab
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-### 🎯 Core Features
+### Core Features
 
-- ✅ **Feature 1**: Description of feature 1
-- ✅ **Feature 2**: Description of feature 2
-- ✅ **Feature 3**: Description of feature 3
-- ✅ **Feature 4**: Description of feature 4
+- **Feature 1**: Description of feature 1
+- **Feature 2**: Description of feature 2
+- **Feature 3**: Description of feature 3
+- **Feature 4**: Description of feature 4
 
-### 🔧 Technical Features
+### Technical Features
 
-- 🎨 Modern, responsive UI with Tailwind CSS
-- 🔐 Secure authentication and authorization
-- 📊 Real-time data synchronization
-- ⚡ Fast and efficient API endpoints
-- 🧪 Comprehensive input validation
-- 📝 Clean and maintainable codebase
-- 🔄 Version control with detailed commit history
-- 📱 Cross-platform compatibility
+- Modern, responsive UI with Tailwind CSS
+- Secure authentication and authorization
+- Real-time data synchronization
+- Fast and efficient API endpoints
+- Comprehensive input validation
+- Clean and maintainable codebase
+- Version control with detailed commit history
+- Cross-platform compatibility
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 <div align="center">
 
@@ -160,7 +173,7 @@ Our solution leverages cutting-edge web technologies to deliver a robust, scalab
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 odoo-x-gcet-hackathon-26/
@@ -203,7 +216,7 @@ odoo-x-gcet-hackathon-26/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
@@ -331,7 +344,7 @@ npm start
 
 ---
 
-## 💻 Usage
+## Usage
 
 ### Basic Workflow
 
@@ -364,25 +377,25 @@ For detailed API documentation, see [docs/API.md](docs/API.md)
 
 ---
 
-## 🎥 Demo
+## Demo
 
-### 📸 Screenshots
+### Screenshots
 
 *Screenshots will be added here*
 
-### 🎬 Video Demonstration
+### Video Demonstration
 
 **[Demo Video Link]** (Public/Unlisted, max 5 minutes)
 
 *Video link will be added during the hackathon submission*
 
-### 🔗 Live Demo
+### Live Demo
 
 **[Live Application Link]** (if deployed)
 
 ---
 
-## 🗺️ Roadmap
+## Roadmap
 
 - [x] Project setup and initialization
 - [x] Basic project structure
@@ -400,7 +413,7 @@ See the [open issues](https://github.com/your-username/odoo-x-gcet-hackathon-26/
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -422,34 +435,13 @@ Contributions are what make the open-source community such an amazing place to l
 
 ---
 
-## 👥 Team
-
-<div align="center">
-
-### Team Members
-
-| Name | Role | GitHub | LinkedIn |
-|------|------|--------|----------|
-| **Vishal Baraiya** | Team Leader & Full Stack Developer | [@vishal](https://github.com/) | [LinkedIn](https://linkedin.com/) |
-| **Dhruvrajsinh Zala** | Backend Developer | [@dhruv](https://github.com/) | [LinkedIn](https://linkedin.com/) |
-| **Pujan Ajmera** | Frontend Developer | [@pujan](https://github.com/) | [LinkedIn](https://linkedin.com/) |
-| **Haresh Zapadiya** | Database & DevOps | [@haresh](https://github.com/) | [LinkedIn](https://linkedin.com/) |
-
-### 🧑‍🏫 Mentor
-
-**Dishant Mistry** - Odoo Mentor
-
-</div>
-
----
-
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Odoo** - For organizing this amazing hackathon
 - **GCET** - For providing the platform and support
@@ -459,19 +451,19 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 📞 Contact
+## Contact
 
 **Project Link**: [https://github.com/your-username/odoo-x-gcet-hackathon-26](https://github.com/your-username/odoo-x-gcet-hackathon-26)
 
-**Team Leader**: Vishal Baraiya - [email@example.com](mailto:email@example.com)
+**Team Leader**: Vishal Baraiya - [baraiyavishalbhai32@gmail.com](mailto:baraiyavishalbhai32@gmail.com)
 
 ---
 
 <div align="center">
 
-### ⭐ Don't forget to star this repository if you found it helpful!
+### Don't forget to star this repository if you found it helpful!
 
-**Made with ❤️ by Team [Your Team Name]**
+**Made by Team TechTitans**
 
 **Odoo x GCET Hackathon 2026**
 
