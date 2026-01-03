@@ -15,7 +15,7 @@
 | Name | Role |
 |------|------|
 | **Vishal Baraiya** | Team Leader, Database Designer & Backend Developer |
-| **Pujan Ajmera** | Frontend UI , Layout marking & API Integration|
+| **Pujan Ajmera** | Frontend UI , Layout making & API Integration|
 | **Haresh Zapadiya** | Frontend Components, UX & Accessibility |
 | **Dhruvrajsinh Zala** | Testing & Documentation |
 
