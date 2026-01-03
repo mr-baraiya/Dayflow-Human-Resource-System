@@ -1,74 +1,99 @@
-# Dayflow HRMS Backend
+# Dayflow HRMS - Backend API
 
-## Quick Links
-- [Setup Guide](docs/SETUP_GUIDE.md) - Complete installation and configuration
-- [API Testing](docs/API_TESTING.md) - Test endpoints with examples
-- [Frontend Integration](docs/FRONTEND_INTEGRATION.md) - Connect your frontend
+**Human Resource Management System Backend**  
+Built with Node.js, Express, Sequelize, and JWT Authentication
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-Every workday, perfectly aligned. 
+Every workday, perfectly aligned. ✨
 
-##  Features
+## Documentation
 
-- User Authentication (Register/Login) with JWT
-- Role-based Authorization (Admin/Employee)
-- Employee Profile Management
-- Attendance Tracking (Check-in/Check-out)
-- Leave Management System
-- Payroll Management
-- RESTful API Design
-- Input Validation
-- Error Handling
+- **[API Testing Guide](docs/API_TESTING.md)** - Complete guide for testing all API endpoints with PowerShell, cURL, and Postman
+- **[Frontend Integration Guide](docs/FRONTEND_INTEGRATION.md)** - React/Vue/Angular integration examples and best practices
+
+## Features
+
+### Core Features
+- ✅ User Authentication (Register/Login) with JWT
+- ✅ Password Reset with Email Notifications
+- ✅ Role-based Authorization (Admin/Manager/Employee)
+
+### Employee Features
+- ✅ Profile Management
+- ✅ Attendance Tracking (Check-in/Check-out)
+- ✅ Leave Request System
+- ✅ Payroll Viewing
+- ✅ Personal Dashboard with Statistics
+
+### Admin Features
+- ✅ User Management (Activate/Deactivate)
+- ✅ Attendance Management
+- ✅ Leave Approval System
+- ✅ Payroll Processing
+- ✅ Admin Dashboard with Analytics
+
+### Additional Features
+- ✅ Email Notifications (Password Reset)
+- ✅ RESTful API Design
+- ✅ Input Validation & Sanitization
+- ✅ Comprehensive Error Handling
+- ✅ Secure Password Hashing
 
 ## 🛠️ Technology Stack
 
-- **Runtime**: Node.js
-- **Framework**: Express.js
-- **Database**: MS SQL Server
-- **ORM**: Sequelize
-- **Authentication**: JWT (jsonwebtoken)
-- **Password Hashing**: bcryptjs
-- **Validation**: express-validator
-- **Environment**: dotenv
+- **Runtime**: Node.js v22.17.0
+- **Framework**: Express.js 4.18.2
+- **Database**: MS SQL Server Express
+- **ORM**: Sequelize 6.35.2
+- **Authentication**: JWT (jsonwebtoken 9.0.2)
+- **Password Hashing**: bcryptjs 2.4.3
+- **Email**: nodemailer with Gmail SMTP
+- **Validation**: express-validator 7.0.1
+- **Environment**: dotenv 16.3.1
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 backend/
 ├── config/
-│   └── database.js          # Database configuration
+│   └── database.js             # Database configuration
 ├── controllers/
-│   ├── authController.js    # Authentication logic
-│   ├── userController.js    # User management
-│   ├── attendanceController.js
-│   ├── leaveController.js
-│   └── payrollController.js
+│   ├── authController.js       # Authentication (register, login, password reset)
+│   ├── userController.js       # User management (CRUD, status update)
+│   ├── profileController.js    # Profile management & password change
+│   ├── dashboardController.js  # Dashboard statistics & analytics
+│   ├── attendanceController.js # Attendance tracking
+│   ├── leaveController.js      # Leave management
+│   └── payrollController.js    # Payroll processing
 ├── middleware/
-│   ├── auth.js             # JWT authentication
-│   ├── validator.js        # Input validation
-│   └── error.js            # Error handling
+│   ├── auth.js                 # JWT authentication & authorization
+│   ├── validator.js            # Input validation
+│   └── error.js                # Error handling
 ├── models/
-│   ├── User.js
-│   ├── EmployeeProfile.js
-│   ├── Attendance.js
-│   ├── LeaveRequest.js
-│   ├── Payroll.js
-│   └── index.js
+│   ├── User.js                 # User model with password reset tokens
+│   ├── EmployeeProfile.js      # Employee details
+│   ├── Attendance.js           # Attendance records
+│   ├── LeaveRequest.js         # Leave requests
+│   ├── Payroll.js              # Payroll records
+│   └── index.js                # Model associations
 ├── routes/
-│   ├── auth.js
-│   ├── users.js
-│   ├── attendance.js
-│   ├── leave.js
-│   └── payroll.js
+│   ├── auth.js                 # Auth routes (register, login, forgot/reset password)
+│   ├── users.js                # User management routes
+│   ├── profile.js              # Profile & change password routes
+│   ├── dashboard.js            # Dashboard & statistics routes
+│   ├── attendance.js           # Attendance routes
+│   ├── leave.js                # Leave management routes
+│   └── payroll.js              # Payroll routes
 ├── utils/
-│   └── auth.js             # Auth utilities
-├── .env                    # Environment variables
-├── .env.example            # Environment template
+│   ├── auth.js                 # JWT utilities
+│   └── sendEmail.js            # Email service (password reset, notifications)
+├── docs/
+│   ├── API_TESTING.md          # Complete API testing guide
+│   └── FRONTEND_INTEGRATION.md # Frontend integration examples
+├── .env                        # Environment variables (not in repo)
+├── .env.example                # Environment template
 ├── .gitignore
 ├── package.json
-├── server.js               # Application entry point
+├── server.js                   # Application entry point
 └── README.md
 ```
 
@@ -135,39 +160,57 @@ backend/
    
    Visit: `http://localhost:5000/api/health`
 
-## API Endpoints
+## 📚 API Endpoints
+
+> **For detailed testing examples and integration guides, see:**
+> - [API Testing Guide](docs/API_TESTING.md) - PowerShell, cURL, and Postman examples
+> - [Frontend Integration Guide](docs/FRONTEND_INTEGRATION.md) - React/Vue/Angular code examples
 
 ### Authentication
 | Method | Endpoint | Description | Access |
 |--------|----------|-------------|---------|
 | POST | `/api/auth/register` | Register new user | Public |
 | POST | `/api/auth/login` | Login user | Public |
-| GET | `/api/auth/me` | Get current user | Private |
+| POST | `/api/auth/forgot-password` | Request password reset | Public |
+| PUT | `/api/auth/reset-password/:token` | Reset password with token | Public |
 
-### Users
+### Profile Management
 | Method | Endpoint | Description | Access |
 |--------|----------|-------------|---------|
-| GET | `/api/users/profile` | Get current user profile | Private |
-| PUT | `/api/users/profile` | Update profile | Private |
+| GET | `/api/profile` | Get your profile | Private |
+| PUT | `/api/profile` | Update your profile | Private |
+| POST | `/api/profile/change-password` | Change password | Private |
+
+### Dashboard
+| Method | Endpoint | Description | Access |
+|--------|----------|-------------|---------|
+| GET | `/api/dashboard/stats` | Get your statistics | Private |
+| GET | `/api/dashboard/attendance/today` | Today's attendance | Private |
+| GET | `/api/dashboard/leave-balance` | Your leave balance | Private |
+| GET | `/api/dashboard/admin/stats` | Admin statistics | Admin/Manager |
+
+### Users (Admin)
+| Method | Endpoint | Description | Access |
+|--------|----------|-------------|---------|
 | GET | `/api/users` | Get all users | Admin |
 | GET | `/api/users/:id` | Get user by ID | Admin |
 | PUT | `/api/users/:id` | Update user | Admin |
+| PUT | `/api/users/:id/status` | Activate/Deactivate user | Admin |
 
 ### Attendance
 | Method | Endpoint | Description | Access |
 |--------|----------|-------------|---------|
-| POST | `/api/attendance/checkin` | Check-in | Private |
-| POST | `/api/attendance/checkout` | Check-out | Private |
-| GET | `/api/attendance/my` | Get my attendance | Private |
+| POST | `/api/attendance` | Mark attendance (check-in) | Private |
+| PUT | `/api/attendance/:id` | Update attendance (check-out) | Private |
+| GET | `/api/attendance/my` | Get my attendance records | Private |
 | GET | `/api/attendance` | Get all attendance | Admin |
-| GET | `/api/attendance/user/:userId` | Get user attendance | Admin |
-| POST | `/api/attendance/mark/:userId` | Mark attendance | Admin |
 
 ### Leave Management
 | Method | Endpoint | Description | Access |
 |--------|----------|-------------|---------|
 | POST | `/api/leave/apply` | Apply for leave | Private |
 | GET | `/api/leave/my` | Get my leave requests | Private |
+| GET | `/api/leave/pending` | Get pending requests | Admin/Manager |
 | GET | `/api/leave/:leaveId` | Get leave by ID | Private |
 | GET | `/api/leave` | Get all leave requests | Admin |
 | PUT | `/api/leave/:leaveId/approve` | Approve/Reject leave | Admin |
@@ -181,7 +224,7 @@ backend/
 | POST | `/api/payroll/user/:userId` | Create/Update payroll | Admin |
 | DELETE | `/api/payroll/:payrollId` | Delete payroll | Admin |
 
-##  Authentication
+## 🔐 Authentication
 
 All protected routes require a JWT token in the Authorization header:
 
@@ -190,24 +233,13 @@ Authorization: Bearer <token>
 ```
 
 ### Example Request
-=======
-## Quick Start
->>>>>>> Stashed changes
-=======
-## Quick Start
->>>>>>> Stashed changes
-=======
-## Quick Start
->>>>>>> Stashed changes
 
 ```bash
-# Install dependencies
-npm install
+curl -X GET http://localhost:5000/api/users/profile \
+  -H "Authorization: Bearer your_jwt_token_here"
+```
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-##  API Request Examples
+## 📝 API Request Examples
 
 ### Register
 ```json
@@ -254,7 +286,7 @@ Authorization: Bearer <admin_token>
 }
 ```
 
-##  Database Schema
+## 🗄️ Database Schema
 
 The API uses the following tables:
 - **Users** - User authentication & basic info
@@ -263,7 +295,7 @@ The API uses the following tables:
 - **LeaveRequests** - Leave applications & approvals
 - **Payroll** - Salary & payroll information
 
-## Testing
+## 🧪 Testing
 
 You can test the API using:
 - **Postman** - Import the collection (if provided)
@@ -271,65 +303,36 @@ You can test the API using:
 - **cURL** commands
 - **Frontend application**
 
-##  Development
+## 🔧 Development
 
 ### Available Scripts
 
 ```bash
 # Start development server with auto-reload
-=======
-# Configure environment
-copy .env.example .env
-# Edit .env with your settings
-
-# Start development server
->>>>>>> Stashed changes
-=======
-# Configure environment
-copy .env.example .env
-# Edit .env with your settings
-
-# Start development server
->>>>>>> Stashed changes
-=======
-# Configure environment
-copy .env.example .env
-# Edit .env with your settings
-
-# Start development server
->>>>>>> Stashed changes
 npm run dev
+
+# Start production server
+npm start
+
+# Run tests (when implemented)
+npm test
 ```
 
-Visit: http://localhost:5000/api/health
+### Environment Modes
 
-## Features
+- **Development**: Detailed error messages and logging
+- **Production**: Minimal error exposure
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-## Security Features
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-✅ JWT Authentication & Authorization  
-✅ Password Reset with Email  
-✅ Profile & Dashboard Management  
-✅ Attendance Tracking  
-✅ Leave Management  
-✅ Payroll System  
-✅ Admin Controls  
-✅ Rate Limiting & Security  
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
+## 🛡️ Security Features
 
-## Documentation
+- Password hashing with bcrypt
+- JWT token-based authentication
+- Role-based access control
+- Input validation and sanitization
+- SQL injection protection (Sequelize ORM)
+- CORS configuration
 
-<<<<<<< Updated upstream
-## Dependencies
+## 📦 Dependencies
 
 ```json
 {
@@ -344,7 +347,7 @@ Visit: http://localhost:5000/api/health
 }
 ```
 
-##  Deployment
+## 🚀 Deployment
 
 ### Prerequisites
 - Node.js hosting (Heroku, AWS, Azure, etc.)
@@ -369,15 +372,15 @@ Visit: http://localhost:5000/api/health
 - Check `JWT_SECRET` is set correctly
 - Verify token is sent in Authorization header
 
-##  License
+## 📄 License
 
 MIT License
 
-##  Authors
+## 👥 Authors
 
 Dayflow Team
 
-##  Contributing
+## 🤝 Contributing
 
 1. Fork the repository
 2. Create feature branch (`git checkout -b feature/AmazingFeature`)
@@ -385,25 +388,11 @@ Dayflow Team
 4. Push to branch (`git push origin feature/AmazingFeature`)
 5. Open Pull Request
 
-##  Support
+## 📞 Support
 
 For issues or questions, please create an issue in the repository.
-=======
-📖 **[Full README](README_FULL.md)** - Complete documentation
->>>>>>> Stashed changes
-=======
-
-## Documentation
-
-📖 **[Full README](README_FULL.md)** - Complete documentation
->>>>>>> Stashed changes
-=======
-
-## Documentation
-
-📖 **[Full README](README_FULL.md)** - Complete documentation
->>>>>>> Stashed changes
 
 ---
 
-*Every workday, perfectly aligned.* ✨
+**Built with ❤️ by Dayflow Team**
+
