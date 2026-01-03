@@ -121,23 +121,14 @@ REACT_APP_API_URL=http://localhost:5000/api
 
 Full API documentation: See [backend/docs](backend/docs/API_TESTING.md)
 
-## Screenshots
-
-<div align="center">
-
-*Screenshots will be added here showcasing:*
-- Login/Register pages
-- Employee & Admin dashboards
-- Attendance tracking interface
-- Leave management system
-- Profile management
-
-</div>
-
 ## Demo
 
-- **Demo Video**: [Coming soon]
-- **Live Demo**: [Coming soon]
+> **Demo Video (YouTube – Recommended)**  
+> **[Watch Demo](https://youtu.be/xfhkZ7LwcBo)**  
+
+> **Demo Video (Google Drive – Original Recording)**  
+> **[View / Download](https://drive.google.com/file/d/159JLKX4X3_gY6XQ-DTeGx1pc9IfoqZOB/view?usp=sharing)**  
+
 
 ## Project Structure
 
