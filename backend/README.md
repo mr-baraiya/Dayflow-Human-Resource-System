@@ -6,6 +6,8 @@
 - [Frontend Integration](docs/FRONTEND_INTEGRATION.md) - Connect your frontend
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Every workday, perfectly aligned. 
 
 ##  Features
@@ -191,11 +193,19 @@ Authorization: Bearer <token>
 =======
 ## Quick Start
 >>>>>>> Stashed changes
+=======
+## Quick Start
+>>>>>>> Stashed changes
+=======
+## Quick Start
+>>>>>>> Stashed changes
 
 ```bash
 # Install dependencies
 npm install
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 ##  API Request Examples
 
@@ -274,6 +284,20 @@ copy .env.example .env
 
 # Start development server
 >>>>>>> Stashed changes
+=======
+# Configure environment
+copy .env.example .env
+# Edit .env with your settings
+
+# Start development server
+>>>>>>> Stashed changes
+=======
+# Configure environment
+copy .env.example .env
+# Edit .env with your settings
+
+# Start development server
+>>>>>>> Stashed changes
 npm run dev
 ```
 
@@ -282,8 +306,14 @@ Visit: http://localhost:5000/api/health
 ## Features
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ## Security Features
 =======
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 ✅ JWT Authentication & Authorization  
 ✅ Password Reset with Email  
 ✅ Profile & Dashboard Management  
@@ -292,6 +322,8 @@ Visit: http://localhost:5000/api/health
 ✅ Payroll System  
 ✅ Admin Controls  
 ✅ Rate Limiting & Security  
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
 
 ## Documentation
@@ -357,6 +389,18 @@ Dayflow Team
 
 For issues or questions, please create an issue in the repository.
 =======
+📖 **[Full README](README_FULL.md)** - Complete documentation
+>>>>>>> Stashed changes
+=======
+
+## Documentation
+
+📖 **[Full README](README_FULL.md)** - Complete documentation
+>>>>>>> Stashed changes
+=======
+
+## Documentation
+
 📖 **[Full README](README_FULL.md)** - Complete documentation
 >>>>>>> Stashed changes
 
