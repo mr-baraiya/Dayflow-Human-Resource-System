@@ -61,13 +61,13 @@ src/
 
 ## Features
 
-- 🔐 Authentication (Login/Register)
-- 👤 User Profile Management
-- ⏰ Attendance Tracking
-- 📝 Leave Management
-- 👥 Employee Directory
-- 🔧 Admin Dashboard
-- 👨‍💼 User Management (Admin)
+-  Authentication (Login/Register)
+-  User Profile Management
+-  Attendance Tracking
+-  Leave Management
+-  Employee Directory
+-  Admin Dashboard
+-  User Management (Admin)
 
 ## Environment Variables
 
