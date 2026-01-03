@@ -3,19 +3,19 @@
 **Human Resource Management System Backend**  
 Built with Node.js, Express, Sequelize, and JWT Authentication
 
-Every workday, perfectly aligned. ✨
+Every workday, perfectly aligned. 
 
-## 🚀 Features
+##  Features
 
-- ✅ User Authentication (Register/Login) with JWT
-- ✅ Role-based Authorization (Admin/Employee)
-- ✅ Employee Profile Management
-- ✅ Attendance Tracking (Check-in/Check-out)
-- ✅ Leave Management System
-- ✅ Payroll Management
-- ✅ RESTful API Design
-- ✅ Input Validation
-- ✅ Error Handling
+- User Authentication (Register/Login) with JWT
+- Role-based Authorization (Admin/Employee)
+- Employee Profile Management
+- Attendance Tracking (Check-in/Check-out)
+- Leave Management System
+- Payroll Management
+- RESTful API Design
+- Input Validation
+- Error Handling
 
 ## 🛠️ Technology Stack
 
@@ -28,7 +28,7 @@ Every workday, perfectly aligned. ✨
 - **Validation**: express-validator
 - **Environment**: dotenv
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 backend/
@@ -130,7 +130,7 @@ backend/
    
    Visit: `http://localhost:5000/api/health`
 
-## 📚 API Endpoints
+## API Endpoints
 
 ### Authentication
 | Method | Endpoint | Description | Access |
@@ -176,7 +176,7 @@ backend/
 | POST | `/api/payroll/user/:userId` | Create/Update payroll | Admin |
 | DELETE | `/api/payroll/:payrollId` | Delete payroll | Admin |
 
-## 🔐 Authentication
+##  Authentication
 
 All protected routes require a JWT token in the Authorization header:
 
@@ -191,7 +191,7 @@ curl -X GET http://localhost:5000/api/users/profile \
   -H "Authorization: Bearer your_jwt_token_here"
 ```
 
-## 📝 API Request Examples
+##  API Request Examples
 
 ### Register
 ```json
@@ -238,7 +238,7 @@ Authorization: Bearer <admin_token>
 }
 ```
 
-## 🗄️ Database Schema
+##  Database Schema
 
 The API uses the following tables:
 - **Users** - User authentication & basic info
@@ -247,7 +247,7 @@ The API uses the following tables:
 - **LeaveRequests** - Leave applications & approvals
 - **Payroll** - Salary & payroll information
 
-## 🧪 Testing
+## Testing
 
 You can test the API using:
 - **Postman** - Import the collection (if provided)
@@ -255,7 +255,7 @@ You can test the API using:
 - **cURL** commands
 - **Frontend application**
 
-## 🔧 Development
+##  Development
 
 ### Available Scripts
 
@@ -275,7 +275,7 @@ npm test
 - **Development**: Detailed error messages and logging
 - **Production**: Minimal error exposure
 
-## 🛡️ Security Features
+## Security Features
 
 - Password hashing with bcrypt
 - JWT token-based authentication
@@ -284,7 +284,7 @@ npm test
 - SQL injection protection (Sequelize ORM)
 - CORS configuration
 
-## 📦 Dependencies
+## Dependencies
 
 ```json
 {
@@ -299,7 +299,7 @@ npm test
 }
 ```
 
-## 🚀 Deployment
+##  Deployment
 
 ### Prerequisites
 - Node.js hosting (Heroku, AWS, Azure, etc.)
@@ -324,15 +324,15 @@ npm test
 - Check `JWT_SECRET` is set correctly
 - Verify token is sent in Authorization header
 
-## 📄 License
+##  License
 
 MIT License
 
-## 👥 Authors
+##  Authors
 
 Dayflow Team
 
-## 🤝 Contributing
+##  Contributing
 
 1. Fork the repository
 2. Create feature branch (`git checkout -b feature/AmazingFeature`)
@@ -340,7 +340,7 @@ Dayflow Team
 4. Push to branch (`git push origin feature/AmazingFeature`)
 5. Open Pull Request
 
-## 📞 Support
+##  Support
 
 For issues or questions, please create an issue in the repository.
 
