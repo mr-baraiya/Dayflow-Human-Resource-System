@@ -8,7 +8,6 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
-import type { User } from '@/types';
 
 const profileSchema = z.object({
     name: z.string().min(2, 'Name is required'),
@@ -18,10 +17,10 @@ const profileSchema = z.object({
 
 export default function ProfilePage() {
     const { token } = useAuthStore();
-    const [user, setUser] = useState<User | null>(null);
+    const [user, setUser] = useState(null);
     const [isEditing, setIsEditing] = useState(false);
 
-    const form = useForm<z.infer<typeof profileSchema>>({
+    const form = useForm({
         resolver: zodResolver(profileSchema),
         defaultValues: {
             name: '',
@@ -50,7 +49,7 @@ export default function ProfilePage() {
         }
     };
 
-    const onSubmit = async (values: z.infer<typeof profileSchema>) => {
+    const onSubmit = async (values) => {
         try {
             await axios.put('http://localhost:3000/api/profile', values, {
                 headers: { Authorization: `Bearer ${token}` },

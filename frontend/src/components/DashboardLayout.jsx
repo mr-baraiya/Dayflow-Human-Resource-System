@@ -1,11 +1,7 @@
 import { Sidebar } from "./Sidebar"
 import { Header } from "./Header"
 
-interface DashboardLayoutProps {
-    children: React.ReactNode
-}
-
-export function DashboardLayout({ children }: DashboardLayoutProps) {
+export function DashboardLayout({ children }) {
     return (
         <div className="flex h-screen overflow-hidden bg-background">
             <Sidebar />

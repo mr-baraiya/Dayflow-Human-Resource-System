@@ -8,29 +8,10 @@ import { Button } from '@/components/ui/button';
 import { Users, CalendarDays, CheckCircle } from 'lucide-react';
 import { format } from 'date-fns';
 
-interface AdminStats {
-    totalEmployees: number;
-    pendingLeaves: number;
-    presentToday: number;
-}
-
-interface LeaveRequest {
-    id: string;
-    type: string;
-    startDate: string;
-    endDate: string;
-    reason: string;
-    status: string;
-    user: {
-        name: string | null;
-        email: string;
-    };
-}
-
 export default function AdminDashboard() {
     const { token } = useAuthStore();
-    const [stats, setStats] = useState<AdminStats | null>(null);
-    const [leaves, setLeaves] = useState<LeaveRequest[]>([]);
+    const [stats, setStats] = useState(null);
+    const [leaves, setLeaves] = useState([]);
 
     useEffect(() => {
         fetchData();
@@ -49,7 +30,7 @@ export default function AdminDashboard() {
         }
     };
 
-    const handleStatusUpdate = async (id: string, status: 'APPROVED' | 'REJECTED') => {
+    const handleStatusUpdate = async (id, status) => {
         try {
             await axios.put(`http://localhost:3000/api/admin/leaves/${id}`, { status }, {
                 headers: { Authorization: `Bearer ${token}` }

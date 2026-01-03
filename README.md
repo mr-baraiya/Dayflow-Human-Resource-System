@@ -172,15 +172,15 @@ Dayflow HRMS leverages modern web technologies to deliver a robust, scalable, an
 **Frontend Technologies**
 - **React** - Component-based UI framework
 - **Tailwind CSS** - Utility-first CSS framework
-- **JavaScript/TypeScript** - Programming language
+- **JavaScript** - Programming language
 - **React Router** - Client-side routing
 - **Axios** - HTTP client for API calls
-- **State Management** - Context API or Redux
+- **State Management** - Zustand
 
 **Backend Technologies**
 - **Node.js** - JavaScript runtime environment
 - **Express.js** - Web application framework
-- **JavaScript/TypeScript** - Programming language
+- **JavaScript** - Programming language
 - **Sequelize** / **Prisma** - ORM for database operations
 - **JWT** - Token-based authentication
 - **bcrypt** - Password hashing

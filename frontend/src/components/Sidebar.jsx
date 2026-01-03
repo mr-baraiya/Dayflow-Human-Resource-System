@@ -4,14 +4,7 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { useAuthStore } from "@/store/authStore"
 
-type SidebarItem = {
-    icon: React.ElementType;
-    label: string;
-    href: string;
-    adminOnly?: boolean;
-}
-
-const sidebarItems: SidebarItem[] = [
+const sidebarItems = [
     { icon: LayoutDashboard, label: "Dashboard", href: "/" },
     { icon: Users, label: "My Profile", href: "/profile" },
     { icon: Clock, label: "Attendance", href: "/attendance" },

@@ -11,7 +11,6 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
 import { format } from 'date-fns';
-import type { LeaveRequest } from '@/types';
 
 const leaveSchema = z.object({
     type: z.enum(['SICK', 'CASUAL', 'EARNED']),
@@ -22,10 +21,10 @@ const leaveSchema = z.object({
 
 export default function LeavePage() {
     const { token } = useAuthStore();
-    const [leaves, setLeaves] = useState<LeaveRequest[]>([]);
+    const [leaves, setLeaves] = useState([]);
     const [isApplying, setIsApplying] = useState(false);
 
-    const form = useForm<z.infer<typeof leaveSchema>>({
+    const form = useForm({
         resolver: zodResolver(leaveSchema),
         defaultValues: {
             type: 'CASUAL',
@@ -48,7 +47,7 @@ export default function LeavePage() {
         }
     };
 
-    const onSubmit = async (values: z.infer<typeof leaveSchema>) => {
+    const onSubmit = async (values) => {
         try {
             await axios.post('http://localhost:3000/api/leave', values, {
                 headers: { Authorization: `Bearer ${token}` },

@@ -1,11 +1,11 @@
 # DayFlow HRMS - Frontend
 
-Modern HR Management System frontend built with React, TypeScript, and Vite.
+Modern HR Management System frontend built with React and Vite.
 
 ## Tech Stack
 
 - **React 19** - UI library
-- **TypeScript** - Type safety
+- **JavaScript** - Programming language
 - **Vite** - Build tool and dev server
 - **React Router** - Client-side routing
 - **Zustand** - State management
@@ -55,7 +55,6 @@ src/
 ├── components/     # Reusable UI components
 ├── pages/          # Page components
 ├── store/          # Zustand state stores
-├── types/          # TypeScript type definitions
 ├── lib/            # Utility functions
 └── assets/         # Static assets
 ```

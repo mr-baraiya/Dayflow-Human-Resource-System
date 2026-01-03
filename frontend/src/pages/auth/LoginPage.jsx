@@ -30,7 +30,7 @@ export default function LoginPage() {
     const navigate = useNavigate();
     const setAuth = useAuthStore((state) => state.setAuth);
 
-    const form = useForm<z.infer<typeof formSchema>>({
+    const form = useForm({
         resolver: zodResolver(formSchema),
         defaultValues: {
             email: "",
@@ -38,13 +38,13 @@ export default function LoginPage() {
         },
     })
 
-    async function onSubmit(values: z.infer<typeof formSchema>) {
+    async function onSubmit(values) {
         try {
             const response = await axios.post('http://localhost:3000/api/auth/login', values);
             const { user, token } = response.data;
             setAuth(user, token);
             navigate('/');
-        } catch (error: any) {
+        } catch (error) {
             console.error(error);
             const message = error.response?.data?.message || 'Login failed. Please check your credentials.';
             alert(message);

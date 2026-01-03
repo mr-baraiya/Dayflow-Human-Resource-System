@@ -36,7 +36,7 @@ export default function RegisterPage() {
     const navigate = useNavigate();
     const setAuth = useAuthStore((state) => state.setAuth);
 
-    const form = useForm<z.infer<typeof formSchema>>({
+    const form = useForm({
         resolver: zodResolver(formSchema),
         defaultValues: {
             companyName: "",
@@ -46,13 +46,13 @@ export default function RegisterPage() {
         },
     })
 
-    async function onSubmit(values: z.infer<typeof formSchema>) {
+    async function onSubmit(values) {
         try {
             const response = await axios.post('http://localhost:3000/api/auth/register', values);
             const { user, token } = response.data;
             setAuth(user, token);
             navigate('/');
-        } catch (error: any) {
+        } catch (error) {
             console.error(error);
             const message = error.response?.data?.message || 'Registration failed. Please try again.';
             alert(message);

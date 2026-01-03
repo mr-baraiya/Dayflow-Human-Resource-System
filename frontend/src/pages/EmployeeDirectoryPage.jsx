@@ -3,11 +3,10 @@ import axios from 'axios';
 import { useAuthStore } from '@/store/authStore';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import type { User } from '@/types';
 
 export default function EmployeeDirectoryPage() {
     const { token } = useAuthStore();
-    const [users, setUsers] = useState<User[]>([]);
+    const [users, setUsers] = useState([]);
 
     useEffect(() => {
         fetchUsers();
@@ -15,21 +14,16 @@ export default function EmployeeDirectoryPage() {
 
     const fetchUsers = async () => {
         try {
-            // Reuse the admin endpoint for now, or create a specific one if access control needs tightening
-            // Assuming admin endpoint is protected for ADMIN only, we might need a separate one or relax middleware.
-            // For MVP speed, let's create a public-ish directory endpoint or reuse if role check permits.
-            // Wait, the previous admin endpoint is likely ADMIN only. Let's restart.
             const response = await axios.get('http://localhost:3000/api/admin/users', {
                 headers: { Authorization: `Bearer ${token}` },
             });
             setUsers(response.data);
         } catch (error) {
             console.error('Error fetching users:', error);
-            // Fallback or empty state if access denied
         }
     };
 
-    const getInitials = (name: string | null) => {
+    const getInitials = (name) => {
         if (!name) return 'U';
         return name.split(' ').map((n) => n[0]).join('').toUpperCase().substring(0, 2);
     };

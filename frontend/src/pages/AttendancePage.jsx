@@ -7,18 +7,10 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { Badge } from '@/components/ui/badge';
 import { format } from 'date-fns';
 
-interface AttendanceRecord {
-    id: string;
-    date: string;
-    checkIn: string | null;
-    checkOut: string | null;
-    status: string;
-}
-
 export default function AttendancePage() {
     const { token } = useAuthStore();
-    const [attendance, setAttendance] = useState<AttendanceRecord[]>([]);
-    const [todayRecord, setTodayRecord] = useState<AttendanceRecord | null>(null);
+    const [attendance, setAttendance] = useState([]);
+    const [todayRecord, setTodayRecord] = useState(null);
 
     useEffect(() => {
         fetchAttendance();
@@ -33,7 +25,7 @@ export default function AttendancePage() {
 
             // Check for today's record
             const todayStr = new Date().toDateString();
-            const today = response.data.find((r: AttendanceRecord) => new Date(r.date).toDateString() === todayStr);
+            const today = response.data.find((r) => new Date(r.date).toDateString() === todayStr);
             setTodayRecord(today || null);
         } catch (error) {
             console.error('Error fetching attendance:', error);
@@ -46,7 +38,7 @@ export default function AttendancePage() {
                 headers: { Authorization: `Bearer ${token}` },
             });
             fetchAttendance();
-        } catch (error: any) {
+        } catch (error) {
             alert(error.response?.data?.message || 'Check-in failed');
         }
     };
@@ -57,7 +49,7 @@ export default function AttendancePage() {
                 headers: { Authorization: `Bearer ${token}` },
             });
             fetchAttendance();
-        } catch (error: any) {
+        } catch (error) {
             alert(error.response?.data?.message || 'Check-out failed');
         }
     };

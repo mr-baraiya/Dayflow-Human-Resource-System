@@ -6,8 +6,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Trash2, ShieldCheck, User as UserIcon } from 'lucide-react';
-import type { User } from '@/types';
+import { Trash2, ShieldCheck } from 'lucide-react';
 
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
@@ -17,7 +16,7 @@ import { Plus } from 'lucide-react';
 
 export default function UserManagementPage() {
     const { token, user: currentUser } = useAuthStore();
-    const [users, setUsers] = useState<User[]>([]);
+    const [users, setUsers] = useState([]);
     const [isAddUserOpen, setIsAddUserOpen] = useState(false);
     const [newUser, setNewUser] = useState({ name: '', email: '', password: '', role: 'EMPLOYEE' });
 
@@ -45,13 +44,13 @@ export default function UserManagementPage() {
             setNewUser({ name: '', email: '', password: '', role: 'EMPLOYEE' });
             fetchUsers();
             alert('User created successfully');
-        } catch (error: any) {
+        } catch (error) {
             console.error('Error creating user:', error);
             alert(error.response?.data?.message || 'Failed to create user');
         }
     };
 
-    const handlePromote = async (userId: string) => {
+    const handlePromote = async (userId) => {
         if (!confirm('Are you sure you want to promote this user to ADMIN?')) return;
         try {
             await axios.put(`http://localhost:3000/api/admin/users/${userId}/role`, { role: 'ADMIN' }, {
@@ -64,7 +63,7 @@ export default function UserManagementPage() {
         }
     };
 
-    const handleDelete = async (userId: string) => {
+    const handleDelete = async (userId) => {
         if (!confirm('Are you sure you want to delete this user? This action cannot be undone.')) return;
         try {
             await axios.delete(`http://localhost:3000/api/admin/users/${userId}`, {
@@ -77,7 +76,7 @@ export default function UserManagementPage() {
         }
     };
 
-    const getInitials = (name: string | null) => {
+    const getInitials = (name) => {
         if (!name) return 'U';
         return name.split(' ').map((n) => n[0]).join('').toUpperCase().substring(0, 2);
     };
@@ -152,7 +151,6 @@ export default function UserManagementPage() {
                                 <TableRow key={user.id}>
                                     <TableCell className="flex items-center gap-3">
                                         <Avatar>
-                                            {/* Placeholder for avatar image URL if we had it in schema */}
                                             <AvatarImage src="" />
                                             <AvatarFallback>{getInitials(user.name)}</AvatarFallback>
                                         </Avatar>

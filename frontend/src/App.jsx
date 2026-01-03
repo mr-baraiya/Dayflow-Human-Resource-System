@@ -13,7 +13,7 @@ import { useAuthStore } from './store/authStore';
 
 import { DashboardLayout } from './components/DashboardLayout';
 
-const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
+const ProtectedRoute = ({ children }) => {
   const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
   return isAuthenticated ? children : <Navigate to="/login" />;
 };
