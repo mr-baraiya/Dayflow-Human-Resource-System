@@ -19,6 +19,14 @@
 
 </div>
 
+## Demo
+
+> **Demo Video (YouTube – Recommended)**  
+> **[Watch Demo](https://youtu.be/xfhkZ7LwcBo)**  
+
+> **Demo Video (Google Drive – Original Recording)**  
+> **[View / Download](https://drive.google.com/file/d/159JLKX4X3_gY6XQ-DTeGx1pc9IfoqZOB/view?usp=sharing)**  
+
 ## About
 
 Dayflow HRMS is a comprehensive Human Resource Management System that digitizes and streamlines core HR operations. Developed for the Odoo x GCET Hackathon 2026, it provides separate interfaces for employees and administrators with role-appropriate access and functionality.
@@ -120,15 +128,6 @@ REACT_APP_API_URL=http://localhost:5000/api
 | `/payroll/:id` | PUT | Update payroll |
 
 Full API documentation: See [backend/docs](backend/docs/API_TESTING.md)
-
-## Demo
-
-> **Demo Video (YouTube – Recommended)**  
-> **[Watch Demo](https://youtu.be/xfhkZ7LwcBo)**  
-
-> **Demo Video (Google Drive – Original Recording)**  
-> **[View / Download](https://drive.google.com/file/d/159JLKX4X3_gY6XQ-DTeGx1pc9IfoqZOB/view?usp=sharing)**  
-
 
 ## Project Structure
 
