@@ -15,7 +15,7 @@
 | Name | Role |
 |------|------|
 | **Vishal Baraiya** | Team Leader, Database Designer & Backend Developer |
-| **Pujan Ajmera** | Frontend UI & Layout, API Integration |
+| **Pujan Ajmera** | Frontend UI , Layout marking & API Integration|
 | **Haresh Zapadiya** | Frontend Components, UX & Accessibility |
 | **Dhruvrajsinh Zala** | Testing & Documentation |
 
@@ -57,7 +57,6 @@ This repository contains **Dayflow HRMS**, a comprehensive Human Resource Manage
 - [x] Leave and time-off management
 - [x] Approval workflows for HR/Admin
 - [x] Payroll visibility system
-
 ---
 
 ## Solution Overview
@@ -67,7 +66,7 @@ Dayflow HRMS leverages modern web technologies to deliver a robust, scalable, an
 ### Core Focus Areas
 
 - **User Experience**: Intuitive dashboard design with role-based interfaces
-- **Security**: JWT-based authentication with password hashing and role-based authorization
+- **Security**: JWT-based authentication with password hashing and role-based authentication 
 - **Efficiency**: Streamlined workflows for attendance, leave requests, and approvals
 - **Transparency**: Real-time visibility of attendance, leave status, and payroll information
 - **Scalability**: Modular architecture supporting multiple departments and designations
