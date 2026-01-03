@@ -12,12 +12,12 @@
 
 ### Team Members
 
-| Name | Role | GitHub |
-|------|------|--------|
-| **Vishal Baraiya** | Team Leader, Database Designer & Backend Developer | [@vishal](https://github.com/) |
-| **Pujan Ajmera** | Frontend UI & Layout, API Integration | [@pujan](https://github.com/) |
-| **Haresh Zapadiya** | Frontend Components, UX & Accessibility | [@haresh](https://github.com/) |
-| **Dhruvrajsinh Zala** | Testing & Documentation | [@dhruv](https://github.com/) |
+| Name | Role |
+|------|------|
+| **Vishal Baraiya** | Team Leader, Database Designer & Backend Developer |
+| **Pujan Ajmera** | Frontend UI & Layout, API Integration |
+| **Haresh Zapadiya** | Frontend Components, UX & Accessibility |
+| **Dhruvrajsinh Zala** | Testing & Documentation |
 
 **Mentor**: Dishant Mistry (Odoo)
 
@@ -25,31 +25,13 @@
 
 </div>
 
-## Table of Contents
-
-- [About the Project](#-about-the-project)
-- [Problem Statement](#-problem-statement)
-- [Solution Overview](#-solution-overview)
-- [Key Features](#-key-features)
-- [Tech Stack](#️-tech-stack)
-- [Project Structure](#-project-structure)
-- [Getting Started](#-getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Running the Application](#running-the-application)
-- [Usage](#-usage)
-- [Demo](#-demo)
-- [Roadmap](#-roadmap)
-- [Contributing](#-contributing)
-- [Team](#-team)
-- [License](#-license)
-- [Acknowledgments](#-acknowledgments)
-
----
-
 ## About the Project
 
-This repository contains the solution developed by our team for the **Odoo x GCET Hackathon 2026 Virtual Round**. Our project demonstrates innovative problem-solving through modern web development practices, focusing on scalability, user experience, and clean architecture.
+**Dayflow - Human Resource Management System**
+
+*Every workday, perfectly aligned.*
+
+This repository contains **Dayflow HRMS**, a comprehensive Human Resource Management System developed by our team for the **Odoo x GCET Hackathon 2026 Virtual Round**. Dayflow aims to digitize and streamline core HR operations, making employee management, attendance tracking, leave management, and payroll processes seamless and efficient.
 
 ### Competition Details
 
@@ -57,46 +39,49 @@ This repository contains the solution developed by our team for the **Odoo x GCE
 - **Round**: Virtual Round
 - **Institution**: GCET (Government College of Engineering and Technology)
 - **Date**: January 2026
+- **Project**: Dayflow HRMS
 
 ---
 
 ## Problem Statement
 
-**[Problem Statement Title]**
+**Human Resource Management System (HRMS)**
 
-*To be finalized during the hackathon*
-
-**Objective**: Design and develop a comprehensive solution that addresses [specific challenge/requirement].
+**Objective**: Design and develop a comprehensive HRMS solution that digitizes and streamlines core HR operations including employee onboarding, profile management, attendance tracking, leave management, payroll visibility, and approval workflows.
 
 **Key Requirements**:
-- [ ] Requirement 1
-- [ ] Requirement 2
-- [ ] Requirement 3
-- [ ] Requirement 4
+- [x] Secure authentication (Sign Up / Sign In)
+- [x] Role-based access control (Admin vs Employee)
+- [x] Employee profile management
+- [x] Attendance tracking with daily/weekly views
+- [x] Leave and time-off management
+- [x] Approval workflows for HR/Admin
+- [x] Payroll visibility system
 
 ---
 
 ## Solution Overview
 
-Our solution leverages cutting-edge web technologies to deliver a robust, scalable, and user-friendly application. The architecture is designed with the following principles:
+Dayflow HRMS leverages modern web technologies to deliver a robust, scalable, and user-friendly HR management solution. The system provides separate interfaces for employees and administrators, ensuring role-appropriate access and functionality.
 
 ### Core Focus Areas
 
-- **User Experience**: Intuitive and responsive interface that works seamlessly across all devices
-- **Performance**: Optimized for fast load times and smooth interactions
-- **Security**: Implementing industry-standard security practices for data protection
-- **Scalability**: Modular architecture that can grow with user demands
-- **Quality**: Comprehensive testing and clean code practices
-- **Real-time Operations**: Dynamic data handling and live updates
-- **Responsive Design**: Mobile-first approach ensuring compatibility across devices
+- **User Experience**: Intuitive dashboard design with role-based interfaces
+- **Security**: JWT-based authentication with password hashing and role-based authorization
+- **Efficiency**: Streamlined workflows for attendance, leave requests, and approvals
+- **Transparency**: Real-time visibility of attendance, leave status, and payroll information
+- **Scalability**: Modular architecture supporting multiple departments and designations
+- **Data Integrity**: Normalized database schema with foreign key constraints
+- **Responsive Design**: Mobile-first approach for on-the-go HR management
 
 ### Architecture Highlights
 
-- **Frontend**: Component-based architecture with state management
-- **Backend**: RESTful API design with proper separation of concerns
-- **Database**: Normalized schema with optimized queries
-- **Authentication**: Secure user authentication and authorization
-- **API Documentation**: Well-documented endpoints for easy integration
+- **Frontend**: Component-based React architecture with state management
+- **Backend**: Node.js/Express RESTful API with MVC architecture
+- **Database**: PostgreSQL/MySQL with comprehensive HRMS schema
+- **Authentication**: JWT token-based authentication with role-based access control
+- **Middleware**: Custom middleware for authentication, validation, and error handling
+- **Routes & Controllers**: Clean separation of routing and business logic
 
 ---
 
@@ -104,21 +89,57 @@ Our solution leverages cutting-edge web technologies to deliver a robust, scalab
 
 ### Core Features
 
-- **Feature 1**: Description of feature 1
-- **Feature 2**: Description of feature 2
-- **Feature 3**: Description of feature 3
-- **Feature 4**: Description of feature 4
+**Authentication & Authorization**
+- Secure Sign Up and Sign In with email verification
+- Password security with hashing
+- Role-based access control (Admin, HR, Employee)
+- JWT token-based authentication
+
+**Employee Dashboard**
+- Quick-access cards for Profile, Attendance, and Leave Requests
+- Recent activity alerts and notifications
+- Personalized view based on user role
+
+**Admin/HR Dashboard**
+- Complete employee list management
+- Attendance records overview
+- Leave approval workflow
+- Cross-employee data access
+
+**Employee Profile Management**
+- View personal details, job information, and salary structure
+- Upload and manage profile pictures
+- Edit permitted fields (address, phone)
+- Document management system
+
+**Attendance Management**
+- Daily and weekly attendance views
+- Check-in/Check-out functionality
+- Multiple status types: Present, Absent, Half-day, Leave
+- Role-based attendance visibility
+
+**Leave & Time-Off Management**
+- Apply for different leave types (Paid, Sick, Unpaid)
+- Date range selection with remarks
+- Leave request status tracking (Pending, Approved, Rejected)
+- Admin approval workflow with comments
+
+**Payroll Management**
+- Read-only salary structure for employees
+- Admin control for payroll updates
+- Complete payroll visibility and management
 
 ### Technical Features
 
-- Modern, responsive UI with Tailwind CSS
-- Secure authentication and authorization
-- Real-time data synchronization
-- Fast and efficient API endpoints
+- Modern, responsive UI with React and Tailwind CSS
+- Secure JWT authentication and authorization
+- RESTful API design with proper HTTP methods
+- Entity Framework Core for database operations
+- Layered architecture (Controllers, Services, Models, DTOs)
 - Comprehensive input validation
+- Foreign key constraints for data integrity
 - Clean and maintainable codebase
-- Version control with detailed commit history
-- Cross-platform compatibility
+- Swagger/OpenAPI documentation
 
 ---
 
@@ -134,6 +155,7 @@ Our solution leverages cutting-edge web technologies to deliver a robust, scalab
 ### Backend
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 ### Database
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
@@ -148,28 +170,37 @@ Our solution leverages cutting-edge web technologies to deliver a robust, scalab
 ### Detailed Stack
 
 **Frontend Technologies**
-- **React** / Next.js - Component-based UI framework
+- **React** - Component-based UI framework
 - **Tailwind CSS** - Utility-first CSS framework
 - **JavaScript/TypeScript** - Programming language
 - **React Router** - Client-side routing
 - **Axios** - HTTP client for API calls
+- **State Management** - Context API or Redux
 
 **Backend Technologies**
-- **Node.js** - JavaScript runtime
+- **Node.js** - JavaScript runtime environment
 - **Express.js** - Web application framework
+- **JavaScript/TypeScript** - Programming language
+- **Sequelize** / **Prisma** - ORM for database operations
 - **JWT** - Token-based authentication
-- **Bcrypt** - Password hashing
-- **Cors** - Cross-origin resource sharing
+- **bcrypt** - Password hashing
+- **express-validator** - Input validation
+- **Swagger/OpenAPI** - API documentation
+- **CORS** - Cross-origin resource sharing
 
 **Database & Storage**
-- **PostgreSQL** / MySQL / SQLite - Relational database
-- **Database ORM** - Object-relational mapping
+- **PostgreSQL** / **MySQL** - Relational database
+- **Sequelize** / **Prisma** - Object-relational mapping
+- **SQL Schema** - Comprehensive HRMS data model
+- **node-postgres (pg)** - PostgreSQL client
 
 **Development Tools**
 - **Git** - Version control
+- **VS Code** - Code editor
+- **Postman** - API testing
 - **npm/yarn** - Package management
+- **nodemon** - Development auto-reload
 - **ESLint** - Code linting
-- **Prettier** - Code formatting
 
 ---
 
@@ -177,41 +208,73 @@ Our solution leverages cutting-edge web technologies to deliver a robust, scalab
 
 ```
 odoo-x-gcet-hackathon-26/
-├── backend/               # Backend application
+├── backend/                         # Node.js/Express Backend API
 │   ├── src/
-│   │   ├── config/       # Configuration files
-│   │   ├── controllers/  # Route controllers
-│   │   ├── models/       # Database models
-│   │   ├── routes/       # API routes
-│   │   ├── middleware/   # Custom middleware
-│   │   └── utils/        # Utility functions
-│   ├── package.json
-│   └── .env.example
+│   │   ├── controllers/
+│   │   │   ├── authController.js        # Authentication endpoints
+│   │   │   ├── userController.js        # User management
+│   │   │   ├── attendanceController.js  # Attendance tracking
+│   │   │   ├── leaveController.js       # Leave management
+│   │   │   └── payrollController.js     # Payroll operations
+│   │   ├── models/
+│   │   │   ├── User.js                  # User model
+│   │   │   ├── Employee.js              # Employee model
+│   │   │   ├── Attendance.js            # Attendance model
+│   │   │   ├── LeaveRequest.js          # Leave model
+│   │   │   └── Payroll.js               # Payroll model
+│   │   ├── routes/
+│   │   │   ├── authRoutes.js            # Auth routes
+│   │   │   ├── userRoutes.js            # User routes
+│   │   │   ├── attendanceRoutes.js      # Attendance routes
+│   │   │   ├── leaveRoutes.js           # Leave routes
+│   │   │   └── payrollRoutes.js         # Payroll routes
+│   │   ├── middleware/
+│   │   │   ├── authMiddleware.js        # JWT authentication
+│   │   │   ├── roleMiddleware.js        # Role-based access
+│   │   │   └── validationMiddleware.js  # Input validation
+│   │   ├── config/
+│   │   │   ├── database.js              # Database config
+│   │   │   └── jwt.js                   # JWT config
+│   │   └── utils/
+│   │       ├── errorHandler.js          # Error handling
+│   │       └── helpers.js               # Helper functions
+│   ├── .env.example                 # Environment template
+│   ├── package.json                 # Dependencies
+│   ├── server.js                    # Entry point
+│   └── README.md
 │
-├── frontend/             # Frontend application
+├── frontend/                        # React Frontend Application
 │   ├── src/
-│   │   ├── components/   # Reusable components
-│   │   ├── pages/        # Page components
-│   │   ├── services/     # API services
-│   │   ├── utils/        # Utility functions
-│   │   └── styles/       # Global styles
-│   ├── public/           # Static assets
+│   │   ├── components/              # Reusable components
+│   │   ├── pages/                   # Page components
+│   │   │   ├── Dashboard/           # Dashboard views
+│   │   │   ├── Profile/             # Profile management
+│   │   │   ├── Attendance/          # Attendance views
+│   │   │   ├── Leave/               # Leave management
+│   │   │   └── Auth/                # Login/Register
+│   │   ├── services/                # API integration
+│   │   ├── context/                 # State management
+│   │   ├── utils/                   # Utility functions
+│   │   └── styles/                  # Global styles
+│   ├── public/                      # Static assets
 │   ├── package.json
-│   └── .env.example
+│   └── README.md
 │
-├── database/             # Database scripts & migrations
-│   └── schema.sql
+├── database/                        # Database Schema & Seed Data
+│   ├── dayflow_hrms.sql             # Complete schema
+│   ├── dayflow_hrms_seed.sql        # Sample data
+│   └── README.md                    # Database documentation
 │
-├── docs/                 # Documentation
-│   ├── API.md           # API documentation
-│   └── ARCHITECTURE.md  # Architecture details
+├── docs/                            # Documentation
+│   └── README.md                    # Project documentation
 │
-├── demo/                # Demo files & screenshots
+├── demo/                            # Demo files & screenshots
+│   └── README.md
 │
 ├── .gitignore
 ├── .gitattributes
 ├── LICENSE
-└── README.md            # You are here!
+└── README.md                        # You are here!
 ```
 
 ---
@@ -236,10 +299,14 @@ Make sure you have the following installed on your system:
   yarn --version
   ```
 
-- **PostgreSQL** / MySQL / SQLite
+- **PostgreSQL 12+** or **MySQL 8.0+**
   ```bash
   psql --version
+  # or
+  mysql --version
   ```
+
+- **Visual Studio 2022** or **VS Code** with C# extension
 
 - **Git**
   ```bash
@@ -254,7 +321,22 @@ Make sure you have the following installed on your system:
    cd odoo-x-gcet-hackathon-26
    ```
 
-2. **Backend Setup**
+2. **Database Setup**
+   ```bash
+   # For PostgreSQL
+   psql -U postgres
+   CREATE DATABASE dayflow_hrms;
+   \q
+   
+   # Import schema
+   cd database
+   psql -U postgres -d dayflow_hrms -f dayflow_hrms.sql
+   
+   # Load seed data (optional)
+   psql -U postgres -d dayflow_hrms -f dayflow_hrms_seed.sql
+   ```
+
+3. **Backend Setup**
    ```bash
    cd backend
    npm install
@@ -262,21 +344,29 @@ Make sure you have the following installed on your system:
    yarn install
    ```
 
-3. **Configure Backend Environment**
-   ```bash
-   cp .env.example .env
-   # Edit .env file with your configuration
-   ```
-
-   Required environment variables:
+4. **Configure Backend Environment**
+   
+   Create `.env` file in backend directory:
    ```env
    PORT=5000
-   DATABASE_URL=your_database_connection_string
-   JWT_SECRET=your_jwt_secret_key
    NODE_ENV=development
+   
+   # Database Configuration
+   DB_HOST=localhost
+   DB_PORT=5432
+   DB_NAME=dayflow_hrms
+   DB_USER=postgres
+   DB_PASSWORD=yourpassword
+   
+   # JWT Configuration
+   JWT_SECRET=your-secret-key-minimum-32-characters
+   JWT_EXPIRES_IN=1h
+   
+   # CORS
+   CORS_ORIGIN=http://localhost:3000
    ```
 
-4. **Frontend Setup**
+5. **Frontend Setup**
    ```bash
    cd ../frontend
    npm install
@@ -284,42 +374,28 @@ Make sure you have the following installed on your system:
    yarn install
    ```
 
-5. **Configure Frontend Environment**
-   ```bash
-   cp .env.example .env
-   # Edit .env file with your configuration
-   ```
-
-   Required environment variables:
+6. **Configure Frontend Environment**
+   
+   Create `.env` file in frontend directory:
    ```env
    REACT_APP_API_URL=http://localhost:5000/api
-   ```
-
-6. **Database Setup**
-   ```bash
-   # Create database
-   createdb hackathon_db
-   
-   # Run migrations (if applicable)
-   cd ../database
-   psql -d hackathon_db -f schema.sql
    ```
 
 ### Running the Application
 
 #### Development Mode
 
-1. **Start Backend Server**
+1. **Start Backend API**
    ```bash
    cd backend
    npm run dev
-   # Server will run on http://localhost:5000
+   # API will run on http://localhost:5000
    ```
 
 2. **Start Frontend Application** (in a new terminal)
    ```bash
    cd frontend
-   npm run dev
+   npm start
    # Application will run on http://localhost:3000
    ```
 
@@ -330,6 +406,13 @@ Make sure you have the following installed on your system:
    http://localhost:3000
    ```
 
+4. **Access API Documentation**
+   
+   Swagger UI (if configured) is available at:
+   ```
+   http://localhost:5000/api-docs
+   ```
+
 #### Production Mode
 
 ```bash
@@ -337,9 +420,9 @@ Make sure you have the following installed on your system:
 cd frontend
 npm run build
 
-# Start production server
+# Start backend in production
 cd ../backend
-npm start
+NODE_ENV=production npm start
 ```
 
 ---
@@ -348,32 +431,96 @@ npm start
 
 ### Basic Workflow
 
-1. **User Registration/Login**
-   - Navigate to the authentication page
-   - Create a new account or login with existing credentials
+**For Employees:**
 
-2. **[Feature 1 Usage]**
-   - Step-by-step instructions for using feature 1
+1. **Sign Up / Sign In**
+   - Register with Employee ID, email, and password
+   - Verify email and login
+   - Access employee dashboard
 
-3. **[Feature 2 Usage]**
-   - Step-by-step instructions for using feature 2
+2. **View Profile**
+   - View personal details, job information, and salary structure
+   - Edit permitted fields (address, phone, profile picture)
+   - Upload documents
+
+3. **Mark Attendance**
+   - Use check-in/check-out functionality
+   - View daily and weekly attendance records
+   - Track attendance status
+
+4. **Apply for Leave**
+   - Select leave type (Paid, Sick, Unpaid)
+   - Choose date range and add remarks
+   - Track leave request status (Pending, Approved, Rejected)
+
+5. **View Payroll**
+   - Access salary structure (read-only)
+   - View allowances and deductions
+
+**For Admin/HR:**
+
+1. **Dashboard Access**
+   - View complete employee list
+   - Access attendance records of all employees
+   - Monitor leave requests
+
+2. **Employee Management**
+   - Edit employee profiles
+   - Update job details and salary structure
+   - Manage employee status
+
+3. **Attendance Management**
+   - View attendance of all employees
+   - Generate attendance reports
+
+4. **Leave Approval**
+   - Review leave requests
+   - Approve or reject with comments
+   - Track leave history
+
+5. **Payroll Management**
+   - Update salary structures
+   - Manage allowances and deductions
+   - Ensure payroll accuracy
 
 ### API Endpoints
 
-For detailed API documentation, see [docs/API.md](docs/API.md)
+For detailed API documentation, visit [API Docs](http://localhost:5000/api-docs) (if Swagger is configured)
 
 **Base URL**: `http://localhost:5000/api`
 
 **Authentication Endpoints**:
-- `POST /auth/register` - Register new user
-- `POST /auth/login` - User login
-- `POST /auth/logout` - User logout
+- `POST /api/auth/register` - Register new user
+- `POST /api/auth/login` - User login
+- `POST /api/auth/logout` - User logout
+- `POST /api/auth/refresh` - Refresh access token
 
-**[Other Endpoints]**:
-- `GET /endpoint1` - Description
-- `POST /endpoint2` - Description
-- `PUT /endpoint3/:id` - Description
-- `DELETE /endpoint4/:id` - Description
+**User Management**:
+- `GET /api/users` - Get all users (Admin only)
+- `GET /api/users/{id}` - Get user by ID
+- `PUT /api/users/{id}` - Update user
+- `DELETE /api/users/{id}` - Delete user (Admin only)
+
+**Attendance Management**:
+- `GET /api/attendance` - Get attendance records
+- `POST /api/attendance/checkin` - Clock in
+- `POST /api/attendance/checkout` - Clock out
+- `GET /api/attendance/employee/{id}` - Get employee attendance
+
+**Leave Management**:
+- `GET /api/leave` - Get all leave requests
+- `GET /api/leave/{id}` - Get leave request by ID
+- `POST /api/leave` - Submit leave request
+- `PUT /api/leave/{id}/approve` - Approve leave (HR/Admin)
+- `PUT /api/leave/{id}/reject` - Reject leave (HR/Admin)
+- `GET /api/leave/employee/{id}` - Get employee leave history
+
+**Payroll Management**:
+- `GET /api/payroll` - Get all payroll records
+- `GET /api/payroll/employee/{id}` - Get employee payroll
+- `POST /api/payroll` - Create payroll entry (Admin/HR)
+- `PUT /api/payroll/{id}` - Update payroll (Admin/HR)
+- `GET /api/payroll/calculate/{employeeId}` - Calculate salary
 
 ---
 
@@ -397,19 +544,37 @@ For detailed API documentation, see [docs/API.md](docs/API.md)
 
 ## Roadmap
 
+**Completed Features:**
 - [x] Project setup and initialization
-- [x] Basic project structure
-- [ ] Core feature implementation
-- [ ] UI/UX design completion
-- [ ] Backend API development
-- [ ] Database integration
-- [ ] Authentication system
+- [x] Database schema design (9 tables with relationships)
+- [x] Backend API structure (Controllers, Services, Models, DTOs)
+- [x] Authentication system (JWT-based)
+- [x] Role-based access control
+- [x] Employee profile management
+- [x] Attendance tracking system
+- [x] Leave management with approval workflow
+- [x] Payroll management system
+- [x] Documentation (Database, Backend, Frontend)
+
+**In Progress:**
+- [ ] Frontend UI components
+- [ ] API integration with frontend
 - [ ] Testing and debugging
-- [ ] Documentation
-- [ ] Deployment
+
+**Future Enhancements:**
+- [ ] Email & notification alerts
+- [ ] Analytics & reports dashboard
+- [ ] Salary slip generation
+- [ ] Attendance reports export
+- [ ] Mobile responsive improvements
+- [ ] Advanced filtering and search
+- [ ] Multi-language support
 - [ ] Demo video creation
+- [ ] Deployment to cloud platform
 
 See the [open issues](https://github.com/your-username/odoo-x-gcet-hackathon-26/issues) for a list of proposed features and known issues.
+
+**Design Reference**: [Excalidraw Diagram](https://link.excalidraw.com/l/65VNwvy7c4X/58RLEJ4oOwh)
 
 ---
 
