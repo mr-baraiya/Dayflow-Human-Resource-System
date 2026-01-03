@@ -179,3 +179,48 @@ exports.updateUser = async (req, res) => {
     });
   }
 };
+
+// @desc    Activate/Deactivate user
+// @route   PUT /api/users/:id/status
+// @access  Private (Admin only)
+exports.updateUserStatus = async (req, res) => {
+  try {
+    const { isActive } = req.body;
+
+    if (isActive === undefined) {
+      return res.status(400).json({
+        success: false,
+        message: 'Please provide isActive status'
+      });
+    }
+
+    const user = await User.findByPk(req.params.id);
+
+    if (!user) {
+      return res.status(404).json({
+        success: false,
+        message: 'User not found'
+      });
+    }
+
+    user.IsActive = isActive;
+    await user.save();
+
+    res.status(200).json({
+      success: true,
+      message: `User ${isActive ? 'activated' : 'deactivated'} successfully`,
+      data: {
+        UserId: user.UserId,
+        EmployeeCode: user.EmployeeCode,
+        Email: user.Email,
+        IsActive: user.IsActive
+      }
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({
+      success: false,
+      message: 'Server error'
+    });
+  }
+};

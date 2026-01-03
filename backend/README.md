@@ -1,8 +1,11 @@
-# Dayflow HRMS - Backend API
+# Dayflow HRMS Backend
 
-**Human Resource Management System Backend**  
-Built with Node.js, Express, Sequelize, and JWT Authentication
+## Quick Links
+- [Setup Guide](docs/SETUP_GUIDE.md) - Complete installation and configuration
+- [API Testing](docs/API_TESTING.md) - Test endpoints with examples
+- [Frontend Integration](docs/FRONTEND_INTEGRATION.md) - Connect your frontend
 
+<<<<<<< Updated upstream
 Every workday, perfectly aligned. 
 
 ##  Features
@@ -185,12 +188,15 @@ Authorization: Bearer <token>
 ```
 
 ### Example Request
+=======
+## Quick Start
+>>>>>>> Stashed changes
 
 ```bash
-curl -X GET http://localhost:5000/api/users/profile \
-  -H "Authorization: Bearer your_jwt_token_here"
-```
+# Install dependencies
+npm install
 
+<<<<<<< Updated upstream
 ##  API Request Examples
 
 ### Register
@@ -261,29 +267,36 @@ You can test the API using:
 
 ```bash
 # Start development server with auto-reload
+=======
+# Configure environment
+copy .env.example .env
+# Edit .env with your settings
+
+# Start development server
+>>>>>>> Stashed changes
 npm run dev
-
-# Start production server
-npm start
-
-# Run tests (when implemented)
-npm test
 ```
 
-### Environment Modes
+Visit: http://localhost:5000/api/health
 
-- **Development**: Detailed error messages and logging
-- **Production**: Minimal error exposure
+## Features
 
+<<<<<<< Updated upstream
 ## Security Features
+=======
+✅ JWT Authentication & Authorization  
+✅ Password Reset with Email  
+✅ Profile & Dashboard Management  
+✅ Attendance Tracking  
+✅ Leave Management  
+✅ Payroll System  
+✅ Admin Controls  
+✅ Rate Limiting & Security  
+>>>>>>> Stashed changes
 
-- Password hashing with bcrypt
-- JWT token-based authentication
-- Role-based access control
-- Input validation and sanitization
-- SQL injection protection (Sequelize ORM)
-- CORS configuration
+## Documentation
 
+<<<<<<< Updated upstream
 ## Dependencies
 
 ```json
@@ -343,8 +356,10 @@ Dayflow Team
 ##  Support
 
 For issues or questions, please create an issue in the repository.
+=======
+📖 **[Full README](README_FULL.md)** - Complete documentation
+>>>>>>> Stashed changes
 
 ---
 
-**Built with ❤️ by Dayflow Team**
-
+*Every workday, perfectly aligned.* ✨

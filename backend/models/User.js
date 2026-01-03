@@ -48,6 +48,14 @@ const User = sequelize.define('User', {
     type: DataTypes.DATE,
     defaultValue: DataTypes.NOW,
     field: 'CreatedAt'
+  },
+  ResetPasswordToken: {
+    type: DataTypes.STRING(255),
+    field: 'ResetPasswordToken'
+  },
+  ResetPasswordExpire: {
+    type: DataTypes.DATE,
+    field: 'ResetPasswordExpire'
   }
 }, {
   tableName: 'Users',

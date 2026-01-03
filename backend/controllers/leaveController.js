@@ -200,3 +200,32 @@ exports.getLeaveById = async (req, res) => {
     });
   }
 };
+
+// @desc    Get pending leave requests (for managers/admin)
+// @route   GET /api/leave/pending
+// @access  Private (Manager/Admin only)
+exports.getPendingLeaveRequests = async (req, res) => {
+  try {
+    const leaveRequests = await LeaveRequest.findAll({
+      where: { Status: 'PENDING' },
+      include: [{
+        model: User,
+        as: 'user',
+        attributes: ['UserId', 'EmployeeCode', 'Email', 'Role']
+      }],
+      order: [['createdAt', 'DESC']]
+    });
+
+    res.status(200).json({
+      success: true,
+      count: leaveRequests.length,
+      data: leaveRequests
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({
+      success: false,
+      message: 'Server error'
+    });
+  }
+};

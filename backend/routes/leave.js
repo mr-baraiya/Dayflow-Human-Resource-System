@@ -6,7 +6,8 @@ const {
   getMyLeaveRequests,
   getAllLeaveRequests,
   approveLeave,
-  getLeaveById
+  getLeaveById,
+  getPendingLeaveRequests
 } = require('../controllers/leaveController');
 const { protect, authorize } = require('../middleware/auth');
 
@@ -28,8 +29,9 @@ router.post('/apply', protect, applyLeaveValidation, validate, applyLeave);
 router.get('/my', protect, getMyLeaveRequests);
 router.get('/:leaveId', protect, getLeaveById);
 
-// Admin routes
+// Admin/Manager routes
 router.get('/', protect, authorize('ADMIN'), getAllLeaveRequests);
+router.get('/pending', protect, authorize('ADMIN', 'MANAGER'), getPendingLeaveRequests);
 router.put('/:leaveId/approve', protect, authorize('ADMIN'), approveLeaveValidation, validate, approveLeave);
 
 module.exports = router;

@@ -1,8 +1,9 @@
 const express = require('express');
 const { body } = require('express-validator');
 const { validate } = require('../middleware/validator');
-const { register, login, getMe } = require('../controllers/authController');
+const { register, login, getMe, forgotPassword, resetPassword } = require('../controllers/authController');
 const { protect } = require('../middleware/auth');
+const { authLimiter, passwordResetLimiter } = require('../middleware/rateLimiter');
 
 const router = express.Router();
 
@@ -20,9 +21,21 @@ const loginValidation = [
   body('Password').notEmpty().withMessage('Password is required')
 ];
 
+const forgotPasswordValidation = [
+  body('Email').isEmail().withMessage('Please provide a valid email')
+];
+
+const resetPasswordValidation = [
+  body('Email').isEmail().withMessage('Please provide a valid email'),
+  body('ResetToken').notEmpty().withMessage('Reset token is required'),
+  body('NewPassword').isLength({ min: 6 }).withMessage('Password must be at least 6 characters')
+];
+
 // Routes
-router.post('/register', registerValidation, validate, register);
-router.post('/login', loginValidation, validate, login);
+router.post('/register', authLimiter, registerValidation, validate, register);
+router.post('/login', authLimiter, loginValidation, validate, login);
 router.get('/me', protect, getMe);
+router.post('/forgot-password', passwordResetLimiter, forgotPasswordValidation, validate, forgotPassword);
+router.put('/reset-password/:token', resetPassword);
 
 module.exports = router;
