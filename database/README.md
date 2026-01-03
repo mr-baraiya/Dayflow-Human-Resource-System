@@ -2,7 +2,7 @@
 
 This directory contains the complete database schema and seed data for the **Dayflow Human Resource Management System (HRMS)** - a comprehensive solution for employee management, attendance tracking, leave management, and payroll processing.
 
-## 📁 Structure
+## Structure
 
 ```
 database/
@@ -11,7 +11,7 @@ database/
 └── README.md             # This file
 ```
 
-## 🗄️ Database Information
+## Database Information
 
 - **Database Name**: `dayflow_hrms`
 - **Type**: PostgreSQL (Primary) / MySQL (Compatible)
@@ -19,7 +19,7 @@ database/
 - **Project**: Dayflow HRMS
 - **Version**: 1.0
 
-## 📊 Schema Overview
+## Schema Overview
 
 The database consists of 9 core tables supporting the complete HRMS functionality:
 
@@ -64,7 +64,7 @@ The database consists of 9 core tables supporting the complete HRMS functionalit
    - Net salary calculation
    - Payment tracking
 
-## 🚀 Quick Setup
+## Quick Setup
 
 ### For PostgreSQL
 
@@ -104,7 +104,7 @@ The database consists of 9 core tables supporting the complete HRMS functionalit
    mysql -u root -p dayflow_hrms < dayflow_hrms_seed.sql
    ```
 
-## 📋 Seed Data
+## Seed Data
 
 The `dayflow_hrms_seed.sql` file includes sample data for:
 
@@ -119,7 +119,7 @@ The `dayflow_hrms_seed.sql` file includes sample data for:
 
 **Note**: Password hashes in seed data are placeholders. Replace with actual hashed passwords before production use.
 
-## 🔑 Key Features
+## Key Features
 
 - **Role-Based Access Control**: Separate roles for Admin, HR, and Employees
 - **Employee Management**: Complete employee lifecycle tracking
@@ -129,7 +129,7 @@ The `dayflow_hrms_seed.sql` file includes sample data for:
 - **Foreign Key Constraints**: Data integrity across related tables
 - **Cascading Deletes**: Automatic cleanup of related records
 
-## 🔐 Security Considerations
+## Security Considerations
 
 1. **Password Storage**: Always use secure password hashing (bcrypt, argon2, etc.)
 2. **Database Access**: Use environment variables for database credentials
@@ -137,7 +137,7 @@ The `dayflow_hrms_seed.sql` file includes sample data for:
 4. **SQL Injection**: Use parameterized queries in application code
 5. **Backup Strategy**: Implement regular database backups
 
-## 🛠️ Maintenance
+## Maintenance
 
 ### Backup Database
 
@@ -163,7 +163,7 @@ psql -U postgres -d dayflow_hrms < backup_20260103.sql
 mysql -u root -p dayflow_hrms < backup_20260103.sql
 ```
 
-## 📝 Entity Relationships
+## Entity Relationships
 
 ```
 roles ──< users ──< employees ──< attendance_logs
@@ -177,7 +177,7 @@ departments ──< employees
 designations ──< employees
 ```
 
-## 🤝 Contributing
+## Contributing
 
 When modifying the database schema:
 
@@ -187,7 +187,7 @@ When modifying the database schema:
 4. Test changes thoroughly before committing
 5. Update seed data if necessary
 
-## 📞 Support
+## Support
 
 For database-related issues or questions, please contact the development team or create an issue in the project repository.
 

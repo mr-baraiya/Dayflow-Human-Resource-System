@@ -1,26 +1,8 @@
-/* =========================================================
-   Dayflow - Human Resource Management System (HRMS)
-   Database Schema File
-   ---------------------------------------------------------
-   Author      : Vishal Baraiya
-   Project     : Dayflow HRMS
-   Description : This SQL file creates the complete database
-                 schema for Dayflow HRMS including users,
-                 employees, attendance, leave, and payroll.
-   ========================================================= */
-
-
-/* ===============================
-   DATABASE CREATION
-   =============================== */
 
 CREATE DATABASE dayflow_hrms;
 
-/* Use database (MySQL) */
 USE dayflow_hrms;
-/* For PostgreSQL use:
-   \c dayflow_hrms;
-*/
+
 
 
 /* ===============================
@@ -212,7 +194,3 @@ CREATE TABLE payroll (
         CHECK (month BETWEEN 1 AND 12)
 );
 
-
-/* =========================================================
-   END OF DATABASE SCHEMA
-   ========================================================= */
