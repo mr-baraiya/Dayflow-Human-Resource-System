@@ -45,7 +45,7 @@ Dayflow HRMS is a comprehensive Human Resource Management System that digitizes 
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=flat-square&logo=tailwind-css&logoColor=white)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=flat-square&logo=node.js&logoColor=white)
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=flat-square&logo=express&logoColor=%2361DAFB)
-![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=flat-square&logo=postgresql&logoColor=white)
+![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=flat-square&logo=mysql&logoColor=white)
 ![JWT](https://img.shields.io/badge/JWT-black?style=flat-square&logo=JSON%20web%20tokens)
 
 
@@ -53,7 +53,7 @@ Dayflow HRMS is a comprehensive Human Resource Management System that digitizes 
 
 ### Prerequisites
 - Node.js 16+
-- PostgreSQL 12+ or MySQL 8.0+
+- MySQL 8.0+
 - Git
 
 ### Installation
@@ -64,9 +64,9 @@ git clone https://github.com/mr-baraiya/Dayflow-Human-Resource-System.git
 cd odoo-x-gcet-hackathon-26
 
 # Database setup
-createdb dayflow_hrms
-psql dayflow_hrms < database/dayflow_hrms.sql
-psql dayflow_hrms < database/dayflow_hrms_seed.sql
+mysql -u root -p -e "CREATE DATABASE dayflow_hrms;"
+mysql -u root -p dayflow_hrms < database/dayflow_hrms.sql
+mysql -u root -p dayflow_hrms < database/dayflow_hrms_seed.sql
 
 # Backend setup
 cd backend
@@ -86,8 +86,9 @@ npm start  # Runs on http://localhost:3000
 ```env
 PORT=5000
 DB_HOST=localhost
+DB_PORT=3306
 DB_NAME=dayflow_hrms
-DB_USER=postgres
+DB_USER=root
 DB_PASSWORD=yourpassword
 JWT_SECRET=your-secret-key-min-32-chars
 CORS_ORIGIN=http://localhost:3000

@@ -14,7 +14,7 @@ database/
 ## Database Information
 
 - **Database Name**: `dayflow_hrms`
-- **Type**: PostgreSQL (Primary) / MySQL (Compatible)
+- **Type**: MySQL 8.0+
 - **Author**: Vishal Baraiya
 - **Project**: Dayflow HRMS
 - **Version**: 1.0
@@ -66,25 +66,6 @@ The database consists of 9 core tables supporting the complete HRMS functionalit
 
 ## Quick Setup
 
-### For PostgreSQL
-
-1. **Create the database:**
-   ```bash
-   psql -U postgres
-   CREATE DATABASE dayflow_hrms;
-   \q
-   ```
-
-2. **Run the schema:**
-   ```bash
-   psql -U postgres -d dayflow_hrms -f dayflow_hrms.sql
-   ```
-
-3. **Load seed data (optional):**
-   ```bash
-   psql -U postgres -d dayflow_hrms -f dayflow_hrms_seed.sql
-   ```
-
 ### For MySQL
 
 1. **Create the database:**
@@ -102,6 +83,25 @@ The database consists of 9 core tables supporting the complete HRMS functionalit
 3. **Load seed data (optional):**
    ```bash
    mysql -u root -p dayflow_hrms < dayflow_hrms_seed.sql
+   ```
+
+### For PostgreSQL (Alternative)
+
+1. **Create the database:**
+   ```bash
+   psql -U postgres
+   CREATE DATABASE dayflow_hrms;
+   \q
+   ```
+
+2. **Run the schema:**
+   ```bash
+   psql -U postgres -d dayflow_hrms -f dayflow_hrms.sql
+   ```
+
+3. **Load seed data (optional):**
+   ```bash
+   psql -U postgres -d dayflow_hrms -f dayflow_hrms_seed.sql
    ```
 
 ## Seed Data
@@ -141,26 +141,26 @@ The `dayflow_hrms_seed.sql` file includes sample data for:
 
 ### Backup Database
 
-**PostgreSQL:**
-```bash
-pg_dump -U postgres dayflow_hrms > backup_$(date +%Y%m%d).sql
-```
-
 **MySQL:**
 ```bash
 mysqldump -u root -p dayflow_hrms > backup_$(date +%Y%m%d).sql
 ```
 
-### Restore Database
-
 **PostgreSQL:**
 ```bash
-psql -U postgres -d dayflow_hrms < backup_20260103.sql
+pg_dump -U postgres dayflow_hrms > backup_$(date +%Y%m%d).sql
 ```
+
+### Restore Database
 
 **MySQL:**
 ```bash
 mysql -u root -p dayflow_hrms < backup_20260103.sql
+```
+
+**PostgreSQL:**
+```bash
+psql -U postgres -d dayflow_hrms < backup_20260103.sql
 ```
 
 ## Entity Relationships
