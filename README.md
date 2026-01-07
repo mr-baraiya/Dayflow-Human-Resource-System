@@ -21,6 +21,9 @@
 
 ## Demo
 
+> **Live Demo (Deployed App)**  
+> **[Visit Live App](https://dayflow-hrms.netlify.app/)**  
+
 > **Demo Video (YouTube – Recommended)**  
 > **[Watch Demo](https://youtu.be/xfhkZ7LwcBo)**  
 
