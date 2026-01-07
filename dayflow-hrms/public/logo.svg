@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <style>
+    @media (prefers-color-scheme: light) {
+      .logo-color { fill: #2563eb; stroke: #2563eb; }
+    }
+    @media (prefers-color-scheme: dark) {
+      .logo-color { fill: #60a5fa; stroke: #60a5fa; }
+    }
+  </style>
+  
+  <!-- Outer gear -->
+  <path class="logo-color" d="M100 20L110 30L120 20L125 35L140 30L140 45L155 45L150 60L165 65L155 75L165 90L150 90L155 105L140 105L140 120L125 115L120 130L110 120L100 130L90 120L80 130L75 115L60 120L60 105L45 105L50 90L35 85L45 75L35 60L50 60L45 45L60 45L60 30L75 35L80 20L90 30L100 20Z" stroke-width="4" fill="none"/>
+  
+  <!-- Inner circle -->
+  <circle class="logo-color" cx="100" cy="100" r="45" stroke-width="4" fill="none"/>
+  
+  <!-- People icons -->
+  <!-- Person 1 (left) -->
+  <circle class="logo-color" cx="75" cy="90" r="8"/>
+  <path class="logo-color" d="M75 100C68 100 62 106 62 113V118H88V113C88 106 82 100 75 100Z"/>
+  
+  <!-- Person 2 (center) -->
+  <circle class="logo-color" cx="100" cy="85" r="9"/>
+  <path class="logo-color" d="M100 96C92 96 85 102 85 110V116H115V110C115 102 108 96 100 96Z"/>
+  
+  <!-- Person 3 (right) -->
+  <circle class="logo-color" cx="125" cy="90" r="8"/>
+  <path class="logo-color" d="M125 100C118 100 112 106 112 113V118H138V113C138 106 132 100 125 100Z"/>
+  
+  <!-- Arrows -->
+  <path class="logo-color" d="M170 100L180 90L180 110Z"/>
+  <path class="logo-color" d="M30 100L20 90L20 110Z"/>
+</svg>
